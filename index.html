@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generador de Órdenes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Órdenes McDonald's</h1>
+    <div id="ordenes"></div>
+
+    <div style="margin-bottom: 10px;">
+      <label for="limite">Límite de unidades por orden: </label>
+        <select id="limite" onchange="generarOrdenes()">
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10" selected>10</option>
+      </select>
+    </div>
+
+
+    <div class="botones">
+      <button onclick="servido()">Servido</button>
+      <button onclick="llamarOrden()">Llamar orden</button>
+      <button onclick="siguienteOrden()">Siguiente orden</button>
+      <button onclick="generarOrdenes()">Generar órdenes</button>
+    </div>
+
+    <div id="orden-llamada" class="llamada"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
